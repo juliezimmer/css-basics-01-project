@@ -97,6 +97,9 @@ body{
    color: #0e4f1f;
 }
 
+.button:focus {
+   outline: none;
+}
 /* styling for header and navigation */
 .main-header {
    width: 100%;
