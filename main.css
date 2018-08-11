@@ -1,12 +1,5 @@
 
-* {
-   box-sizing: border-box;
-}
 
-body{
-   font-family: 'Montserrat', sans-serif;
-   margin: 0; /* overrides browser default margins of 8px */
-}
 
 #product-overview {
    background: url("freedom.jpg");
@@ -80,27 +73,6 @@ body{
    margin: 8px 0; 
 }
 
-/* this will be a generic button-design */
-.button {
-   background: #0e4f1f;
-   color: white;
-   font: inherit;
-   border: 1.5px solid #0e4f1f;
-   padding: 8px; /* overwrites default padding */
-   border-radius: 8px;
-   cursor: pointer;
-}
-
-.button:hover,
-.button:active {
-   background: white;
-   color: #0e4f1f;
-}
-
-.button:focus {
-   outline: none;
-}
-
 #key-points {
    background-color: #ff1b68;
    margin-top: 80px;
@@ -143,100 +115,6 @@ body{
    font-size: 20px;
 }
 
-/* styling for header and navigation */
-.main-header {
-   width: 100%;
-   background: #2ddf5c;
-   padding: 10px 20px;  
-}
 
-/* descendant combinator - targets any divs that directly follow  <header class="main-header"> element. */
-.main-header > div {
-   display: inline-block;
-   vertical-align: middle;
-}
 
-.main-header__brand {
-   color: #0e4f1f;
-   text-decoration: none;
-   font-weight: bold;
-   font-size: 22px;
-}
-
-.main-nav {
-   display: inline-block;
-   text-align: right;
-   width: calc(100% - 74px);
-   vertical-align: middle;
-}
-
-.main-nav__items {
-   margin: 0;
-   padding: 0;
-   list-style: none
-}
-
-.main-nav__item {
-   display: inline-block;
-}
-
-.main-nav__item > a {
-   color: #0e4f1f;
-   text-decoration: none;
-   margin: 0 10px; 
-   font-weight: bold;
-   padding: 3px 0;
-}
-
-.main-nav__item a:hover,
-.main-nav__item a:active {
-   color: #fff;
-   border-bottom: 5px solid #fff;
-}
-
-/* targets the Start Hosting navigation link only; the anchor tag    */ 
-.main-nav__item--cta a {
-   color: #fff;
-   background-color: #ff1b68;
-   padding: 8px 16px;
-   border-radius: 8px;
-}
-
-/* changes the hover and active effects of the CTA button */
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
-   color: #ff1b68;
-   background-color: #fff;
-   border: none;
-}
-
-.main-footer {
-   background: black;
-   
-   margin: 48px;
-   padding: 32px;
-}
-
-.main-footer__links {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   text-align: center;
-}
-
-.main-footer__link {
-   display: inline-block;
-   margin: 0 16px; 
-}
-
-/* targets the <a> tag */
-.main-footer__link a {
-   color: white;
-   text-decoration: none;
-}
-
-.main-footer__link a:hover,
-.main-footer__link a:active {
-   color: #ccc;
-}
 
