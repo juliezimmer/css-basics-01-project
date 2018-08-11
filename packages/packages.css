@@ -1,0 +1,18 @@
+main {
+   padding-top: 32px;
+}
+
+.package {
+   width: 80%;
+   margin: 16px 0;
+   border: 4px solid #0e4f1f;
+   border-left: none;
+}
+
+/* combinator targets the <a> tag in each section */
+.package a {
+   text-decoration: none;
+   color: inherit; /* inherits from body, which is Montserrat font and black color (rgb(0,0,0)) */
+   display: block; /* ensures that the <a> tag takes up the full available width of the surrounding section. */
+   padding: 32px;
+}
