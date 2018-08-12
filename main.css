@@ -20,6 +20,12 @@
    font-family: 'Anton', sans-serif;
 }
 
+.plan__list {
+  width: 80%;
+  margin: auto; 
+  text-align: center;
+}
+
 /* targets plans in section with id="plans" */
 .plan {
    background: #d5ffdc;
