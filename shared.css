@@ -11,8 +11,11 @@ body{
 .main-header {
    width: 100%;
    position: fixed;
+   top: 0;
+   left: 0;
    background: #2ddf5c;
-   padding: 10px 20px;  
+   padding: 10px 20px; 
+   z-index: 1; 
 }
 
 /* descendant combinator - targets any divs that directly follow  <header class="main-header"> element. */
