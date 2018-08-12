@@ -10,6 +10,7 @@ body{
 /* styling for header and navigation */
 .main-header {
    width: 100%;
+   position: fixed;
    background: #2ddf5c;
    padding: 10px 20px;  
 }
