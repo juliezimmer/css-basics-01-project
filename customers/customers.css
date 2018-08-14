@@ -1,0 +1,74 @@
+/* targets the div around each testimonial on the page */
+.testimonial {
+   font-size: 2-px;
+   margin: 48px;
+}
+
+/*
+.testimonial__list {
+   width: 80%;
+   margin: auto;
+}
+*/
+
+/* targets the top margin of just the first testimonial on the page */
+.testimonial:first-of-type {
+   margin-top: 96px;
+}
+
+/* targets the container around the image */
+.testimonial__image-container {
+   width: 65%;
+   display: inline-block;
+   vertical-align: middle;
+   box-shadow: 3px 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial__image {
+   width: 100%;
+   vertical-align: top; /* this gets rid of the white line on the bottom edge of the image when box-shadow is used. */ 
+}
+
+/* targets the container around the customer testimonial and information */
+.testimonial__info {
+   text-align: right;
+   padding: 14px;
+   display: inline-block;
+   vertical-align: middle;
+   /* width of this container needs to be limited so it is inlin with the image. */ 
+   width: 30%; 
+}
+
+#customer-2.testimonial {
+   text-align: right;
+}
+
+/* targets the container around customer 2's testimonial */
+#customer-2 .testimonial__info {
+   text-align: left;
+}
+
+.testimonial__name {
+   margin: 3px;
+   color: #ff5454;
+}
+
+.testimonial__subtitle {
+   margin: 0;
+   font-size: 18px;
+   color: #ccc;
+}
+
+.testimonial__subtitle a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.testimonial__subtitle a:hover,
+.testimonial__subtitle a:active {
+   color: #7a7a7a;
+}
+
+.testimonial__text {
+   margin: 3px;
+}
