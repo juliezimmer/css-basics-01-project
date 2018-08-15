@@ -31,7 +31,7 @@ body{
    font-weight: bold;
    font-size: 22px;
    height: 22px;
-    display: inline-block; /* puts the icon on the nav bar at an apropriate size for the nav bar. */
+   display: inline-block; /* puts the icon on the nav bar at an apropriate size for the nav bar. */
    
 }
 
@@ -51,7 +51,7 @@ body{
 .main-nav__items {
    margin: 0;
    padding: 0;
-   list-style: none
+   list-style: none;
 }
 
 .main-nav__item {
