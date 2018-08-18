@@ -9,13 +9,13 @@ body{
 
 /* styling for header and navigation */
 .main-header {
-   width: 100%;
+   width: 100%; /* so the nav bar occupies the entire space available to it */
    position: fixed;
    top: 0;
    left: 0;
    background: #2ddf5c;
-   padding: 10px 20px; 
-   z-index: 1; 
+   padding: 15px 30px; 
+   z-index: 1;
 }
 
 /* descendant combinator - targets any divs that directly follow  <header class="main-header"> element. */
@@ -32,13 +32,11 @@ body{
    font-size: 22px;
    height: 22px;
    display: inline-block; /* puts the icon on the nav bar at an apropriate size for the nav bar. */
-   
 }
 
 /* targets the icon directly */
 .main-header__brand img {
    height: 100%;
-
 }
 
 .main-nav {
@@ -56,12 +54,13 @@ body{
 
 .main-nav__item {
    display: inline-block;
+   margin: 0 16px;
 }
 
-.main-nav__item > a {
+.main-nav__item a {
    color: #0e4f1f;
    text-decoration: none;
-   margin: 0 10px; 
+   /* margin: 0 10px; */ 
    font-weight: bold;
    padding: 3px 0;
 }
@@ -91,8 +90,7 @@ body{
 /* ********** FOOTER ********** */
 .main-footer {
    background: black;
-   
-   margin: 48px;
+   margin-top: 48px;
    padding: 32px;
 }
 
