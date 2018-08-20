@@ -1,7 +1,7 @@
 /* targets the div around each testimonial on the page */
 .testimonial {
    font-size: 1.2rem; /* 19.2px computed value */
-   margin: 48rem 0;
+   margin: 3rem 0;
 }
 
 .testimonial__list {
