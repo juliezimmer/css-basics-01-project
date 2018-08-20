@@ -9,8 +9,8 @@
    /* background-image: radial-gradient(ellipse closest-corner at 20% 50%, red, blue 70%, green); */   
    width: 100%; 
    height: 528px; 
-   padding: 10px;
-   margin-top: 45px; /* pushes the slogan down so it isn't partially hidden under the nav bar. */  
+   padding: 0.65rem; /* 10.4px computed value */
+   margin-top: 2.8rem; /* 44.8px computed value; pushes the slogan down so it isn't partially hidden under the nav bar. */  
    position: relative; 
 }   
 
@@ -38,8 +38,8 @@
 .plan {
    background: #d5ffdc;
    text-align: center; /* aligns text in each article element in the center */
-   padding: 16px;
-   margin: 8px; /* puts a little space between each article element that contains the text */
+   padding: 1rem;
+   margin: 0.5rem; /* puts a little space between each article element that contains the text */
    display: inline-block; /* puts plans next to each other on same row across instead of stacking in a column */
    width: 30%; /* each plan takes up 30% of the width of the container, which is the <article> element */
    vertical-align: middle; 
@@ -57,7 +57,7 @@
    color:#19b84c;
    padding: 8px;
    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);  
-   border-radius: 8px;
+   border-radius: 0.5rem;
 }
 
 .plan__title {
@@ -84,19 +84,19 @@
 }
 
 .plan__feature {
-   margin: 8px 0; 
+   margin: 0.5rem 0; 
 }
 
 #key-points {
    background-color: #ff1b68;
-   margin-top: 80px;
-   padding: 16px; 
+   margin-top: 5rem; /* 80px computed value */
+   padding: 1rem; 
 }
 
 /* use a direct child or descendant combinator to target the h1 text */
 #key-points .section-title {
    color: white;
-   margin: 32px;
+   margin: 2rem;
 }
 
 .key-point__list {
@@ -115,19 +115,19 @@
 
 .key-point__image {
    background: #ffcede;
-   width: 128px;
-   height: 128px;
+   width: 8rem; /* 128px computed value */
+   height: 8rem; /* 128px computed value */
    border: 2px solid #424242;
    border-radius: 50%; /* circle */
    margin: 0 auto; /* automatically fills the available space in the element to the left and right to center the element horizontally. */
-   padding: 20px; /* makes the svg fit the circle a little better */
+   padding: 1.25rem; /* 20px computed value; makes the svg fit the circle a little better */
 }
 
 .key-point__description {
    text-align: center;
    font-weight: bold;
    color: white;
-   font-size: 20px;
+   font-size: 1.25rem; /* 20px computed value */
 }
 
 

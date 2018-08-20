@@ -1,7 +1,7 @@
 /* targets the div around each testimonial on the page */
 .testimonial {
-   font-size: 20px;
-   margin: 48px 0;
+   font-size: 1.2rem; /* 19.2px computed value */
+   margin: 48rem 0;
 }
 
 .testimonial__list {
@@ -11,7 +11,7 @@
 
 /* targets the top margin of just the first testimonial on the page */
 .testimonial:first-of-type {
-   margin-top: 96px;
+   margin-top: 6rem; /* 96px computed value */
 }
 
 /* targets the container around the image */
@@ -31,7 +31,7 @@
 /* targets the container around the customer testimonial and information */
 .testimonial__info {
    text-align: right;
-   padding: 14px;
+   padding: .875rem; /* 14px computed value */
    display: inline-block;
    vertical-align: middle;
    /* width of this container needs to be limited so it is inlin with the image. */ 
@@ -48,13 +48,14 @@
 }
 
 .testimonial__name {
-   margin: 3px;
+   margin: .19rem; /* 3px computed value */
    color: #ff5454;
+   font-size: 2em;
 }
 
 .testimonial__subtitle {
    margin: 0;
-   font-size: 18px;
+   font-size: 1.1rem;   
    color: #ccc;
 }
 
@@ -69,5 +70,5 @@
 }
 
 .testimonial__text {
-   margin: 3px;
+   margin: .19rem; /* 3px computed value */ 
 }
