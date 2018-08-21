@@ -132,6 +132,16 @@ body{
    color: #ccc;
 }
 
+/* ********** Side Nav Bar ********** */ 
+.mobile-nav {
+   display: none;
+   position: fixed;
+   z-index: 101;
+   top: 0;
+   left: 0;
+   background
+}
+
 /* this will be a generic button-design */
 .button {
    background: #0e4f1f;
@@ -152,3 +162,4 @@ body{
 .button:focus {
    outline: none;
 }
+
