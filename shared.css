@@ -40,6 +40,28 @@ body{
    vertical-align: middle;
 }
 
+.toggle-button {
+   width: 3rem;
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   padding-top: 0;
+   padding-bottom: 0;
+   vertical-align:middle;
+}
+
+.toggle-button:focus {
+   outline: none;
+}
+
+.toggle-button__bar {
+   width: 100%;
+   height: 0.2rem;
+   background: black;
+   display: block;
+   margin: 0.6rem 0;
+}
+
 /* this affects the icon-logo, too */
 .main-header__brand {
    color: #0e4f1f;
@@ -48,6 +70,7 @@ body{
    font-size: 1.375rem; /* 22px computed value */
    height: 1.375rem; /* 22px computed value */
    display: inline-block; /* puts the icon on the nav bar at an apropriate size for the nav bar. */
+   vertical-align: middle;
 }
 
 /* targets the icon directly */
@@ -58,7 +81,7 @@ body{
 .main-nav {
    display: inline-block;
    text-align: right;
-   width: calc(100% - 74px);
+   width: calc(100% - 122px);
    vertical-align: middle;
 }
 
@@ -73,7 +96,8 @@ body{
    margin: 0 1rem;
 }
 
-.main-nav__item a {
+.main-nav__item a,
+.mobile-nav__item a {
    color: #0e4f1f;
    text-decoration: none;
    font-weight: bold;
@@ -86,8 +110,9 @@ body{
    border-bottom: 5px solid #fff;
 }
 
-/* targets the Start Hosting navigation link only; the anchor tag    */ 
-.main-nav__item--cta a {
+/* targets the Start Hosting navigation link only; the anchor tag  */ 
+.main-nav__item--cta a, 
+.mobile-nav__item--cta a {
    color: #fff;
    background-color: #ff1b68;
    padding: 0.5rem 1rem;
@@ -96,7 +121,9 @@ body{
 
 /* changes the hover and active effects of the CTA button */
 .main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
    color: #ff1b68;
    background-color: #fff;
    border: none;
@@ -134,12 +161,31 @@ body{
 
 /* ********** Side Nav Bar ********** */ 
 .mobile-nav {
-   display: none;
+   display: none; 
    position: fixed;
    z-index: 101;
    top: 0;
    left: 0;
-   background
+   background: white;
+   width: 80%;
+   height: 100vh;
+}
+
+.mobile-nav__items {
+   width: 90%;
+   height: 100%;
+   list-style: none;
+   margin: 10% auto;
+   padding: 0;
+   text-align: center;
+}
+
+.mobile-nav__item {
+   margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+   font-size: 1.5rem;
 }
 
 /* this will be a generic button-design */
@@ -163,3 +209,7 @@ body{
    outline: none;
 }
 
+/* this class is added dynamically using JS */
+.open {
+   display: block !important;
+}

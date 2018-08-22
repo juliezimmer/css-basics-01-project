@@ -1,36 +1,51 @@
-// variable to store selected elements to be used later
 // variable holds a reference to the HTML DOM element
 // selecting the backdrop element
 var backdrop = document.querySelector('.backdrop');
 var modal = document.querySelector('.modal');
 
-// select the modal no button
-var modalNobutton = document.querySelector('.modal__action--negative');
+// select the modal 'no' button
+var modalNoButton = document.querySelector('.modal__action--negative');
 
 // select 'Choose A Plan' button 
 var selectPlanButtons = document.querySelectorAll('.button');
-console.dir(selectPlanButtons);
+var toggleButton = document.querySelector('.toggle-button');
+var mobileNav = document.querySelector('.mobile-nav');
+
+console.dir(backdrop);
+console.dir(backdrop.style.display);
 
 // var selectPlanButton1 = document.querySelectorAll('.plan button');
-// console.dir(selectPlanButton1);
-
 // for loop to access the buttons in the NodeList and add an EventListener
 for (var i = 0; i < selectPlanButtons.length; i++) {
    selectPlanButtons[i].addEventListener('click', function() {
-      modal.style.display = 'block';
-      backdrop.style.display = 'block';
-   })
+      modal.classList.add('open');   
+      backdrop.classList.add('open');
+   });
 }
 
 // closes modal
-backdrop.addEventListener('click', closeModal); 
-modalNobutton.addEventListener('click', closeModal);
+backdrop.addEventListener('click', function(){
+   mobileNav.classList.remove('open'); 
+   closeModal();
+}); 
 
-function closeModal() {
-   backdrop.style.display = 'none';
-   modal.style.display = 'none';
+// this only returns true if a valid reference to the button is found:
+if (modalNoButton) {
+   modalNoButton.addEventListener('click', closeModal);
 }
 
+function closeModal() {
+   if (modal) {
+      modal.classList.remove('open');
+   }
+   backdrop.classList.remove('open');
+}
+
+// add an event listener to the toggle-button/hanburger menu icon
+toggleButton.addEventListener('click', function(){
+   mobileNav.classList.add('open'); 
+   backdrop.classList.add('open');
+})
 
 
 
