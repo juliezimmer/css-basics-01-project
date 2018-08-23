@@ -24,7 +24,7 @@
    font-size: 1.6rem; /* 25.6px computed value */
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 40rem) and (min-height: 60rem) {
    #product-overview { 
       /* image */ 
       height: 40vh;
@@ -137,9 +137,12 @@
 
 /* styles individual items in the key-points list */
 .key-point {
-   display: inline-block;
-   width: 30%;
-   vertical-align: top; /* aligns the text at the top of the element at the same vertical line.  This is helpful when some of the text takes up two lines. */ 
+   width: 100%;
+   /* removed or changed for mobile-first development:
+         display: inline-block;
+         width: 30%;
+         vertical-align: top;
+   */
 }
 
 .key-point__image {
@@ -157,6 +160,15 @@
    font-weight: bold;
    color: white;
    font-size: 1.25rem; /* 20px computed value */
+}
+
+@media (min-width: 40rem) {
+   .key-point {
+      display: inline-block;
+      width: 30%;
+      max-width: 25rem;
+      vertical-align: top;
+   }
 }
 
 /* ******** Modal ********** */
