@@ -1,5 +1,5 @@
 #product-overview {
-   background: linear-gradient(to top, rgba(80, 68, 18, 0.6), 10%, transparent), url("images/freedom.jpg") left 10% top 20%/cover no-repeat border-box, #ff1b68; 
+   background: linear-gradient(to top, rgba(80, 68, 18, 0.6), 10%, transparent), url("images/freedom.jpg") center/cover no-repeat border-box, #ff1b68; 
    /* background-size: cover;
    background-position: left 10% top 20%; 
    background-repeat: no-repeat; 
@@ -14,11 +14,6 @@
    position: relative; 
 }   
 
-.section-title {
-   color: #2ddf5c;
-   text-align: center;
-}
-
 /* targets any h1 elements that are nested within the element with  product-overview id */
 #product-overview h1 {
    color: #fff;
@@ -26,30 +21,56 @@
    position: absolute; 
    bottom: 5%;
    left: 3%;
+   font-size: 1.6rem; /* 25.6px computed value */
 }
 
+@media (min-width: 40rem) {
+   #product-overview { /* image */ 
+      height: 40vh;
+      background-position: 50% 25%;
+   }
+
+   #product-overview h1 { /* slogan */
+      font-size: 3rem; /* 48px computed value */
+   }
+}
+
+.section-title {
+   color: #2ddf5c;
+   text-align: center;
+}
+
+/* Not needed for mobile view: 
 .plan__list {
-  width: 80%;
-  margin: auto;  /* centers the plans */
-  text-align: center;
-}
+   width: 100%;
+   text-align: center;
+   /* CSS removed or changed for mobile-first development:
+         margin: auto;  //centers the plans 
+         width: 80%; 
+} */
 
-/* targets plans in section with id="plans" */
 .plan {
    background: #d5ffdc;
    text-align: center; /* aligns text in each article element in the center */
    padding: 1rem;
-   margin: 0.5rem; /* puts a little space between each article element that contains the text */
-   display: inline-block; /* puts plans next to each other on same row across instead of stacking in a column */
-   width: 30%; /* each plan takes up 30% of the width of the container, which is the <article> element */
-   vertical-align: middle; 
+   margin: 0.5rem 0;
+   width: 100%;
+   
+   /* CSS removed or changed for mobile-first development:
+         width: 30%; // each plan takes up 30% of the width of the container, which is the <article> element 
+         margin: 0.5rem; // puts a little space between each article element that contains the text 
+         vertical-align: middle; 
+         display: inline-block;  
+   */
 }
 
 /* targets the RECOMMENDED plan */
 .plan--highlighted {
    background: #19b84c;
    color: #fff;
-   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); 
+   /* removed or changed for mobile view: 
+         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); 
+   */
 }
 
 .plan__annotation {
