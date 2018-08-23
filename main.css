@@ -14,7 +14,7 @@
    position: relative; 
 }   
 
-/* targets any h1 elements that are nested within the element with  product-overview id */
+/* targets any h1 elements that are nested in #product-overview */ 
 #product-overview h1 {
    color: #fff;
    font-family: 'Anton', sans-serif;
@@ -25,12 +25,14 @@
 }
 
 @media (min-width: 40rem) {
-   #product-overview { /* image */ 
+   #product-overview { 
+      /* image */ 
       height: 40vh;
       background-position: 50% 25%;
    }
 
-   #product-overview h1 { /* slogan */
+   #product-overview h1 { 
+      /* slogan */
       font-size: 3rem; /* 48px computed value */
    }
 }
@@ -40,22 +42,12 @@
    text-align: center;
 }
 
-/* Not needed for mobile view: 
-.plan__list {
-   width: 100%;
-   text-align: center;
-   /* CSS removed or changed for mobile-first development:
-         margin: auto;  //centers the plans 
-         width: 80%; 
-} */
-
 .plan {
    background: #d5ffdc;
    text-align: center; /* aligns text in each article element in the center */
    padding: 1rem;
    margin: 0.5rem 0;
    width: 100%;
-   
    /* CSS removed or changed for mobile-first development:
          width: 30%; // each plan takes up 30% of the width of the container, which is the <article> element 
          margin: 0.5rem; // puts a little space between each article element that contains the text 
@@ -68,9 +60,6 @@
 .plan--highlighted {
    background: #19b84c;
    color: #fff;
-   /* removed or changed for mobile view: 
-         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); 
-   */
 }
 
 .plan__annotation {
@@ -93,7 +82,7 @@
    color: white;
 }
 
-/* combinator that targets the plan price only on the plan--highlighted plan */
+/* targets plan price only on highlighted plan */
 .plan--highlighted .plan__price {
    color:  #0e4f1f;
 }
@@ -102,6 +91,25 @@
    list-style: none;
    margin: 0;
    padding: 0;
+}
+
+@media (min-width: 40rem) {
+   .plan__list {
+      width: 100%;
+      text-align: center;
+   }
+
+   .plan {
+      display: inline-block;
+      width: 30%;
+      vertical-align: middle;
+      min-width: 13rem; /* 208px computed value */
+      max-width: 25rem; /* 400px computed value */
+   }
+
+   .plan--highlighted {
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+   }
 }
 
 .plan__feature {
