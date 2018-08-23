@@ -47,7 +47,7 @@ body{
    cursor: pointer;
    padding-top: 0;
    padding-bottom: 0;
-   vertical-align:middle;
+   vertical-align: middle;
 }
 
 .toggle-button:focus {

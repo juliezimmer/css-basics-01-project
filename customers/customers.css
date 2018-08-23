@@ -1,7 +1,9 @@
 /* targets the div around each testimonial on the page */
 .testimonial {
    font-size: 1.2rem; /* 19.2px computed value */
-   margin: 3rem 0;
+   /* removed or changed for mobile-first view:
+         margin: 3rem 0;
+   */
 }
 
 .testimonial__list {
@@ -16,11 +18,15 @@
 
 /* targets the container around the image */
 .testimonial__image-container {
-   width: 65%;
-   max-width: 580px;
-   display: inline-block;
-   vertical-align: middle;
+   width: 100%;
+   max-width: 40rem;
    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+   /* removed or changed for mobile-first view 
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 580px;
+      width: 65%;
+   */
 }
 
 .testimonial__image {
@@ -32,10 +38,11 @@
 .testimonial__info {
    text-align: right;
    padding: .875rem; /* 14px computed value */
-   display: inline-block;
-   vertical-align: middle;
-   /* width of this container needs to be limited so it is inlin with the image. */ 
-   width: 30%; 
+   /* removed or changed for mobile-first view 
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+   */ 
 }
 
 #customer-2.testimonial {
@@ -71,4 +78,24 @@
 
 .testimonial__text {
    margin: .19rem; /* 3px computed value */ 
+}
+
+@media (min-width: 40rem) {
+   .testimonial {
+      margin: 3rem auto;
+      max-width: 1500px; 
+   }
+   
+   .testimonial__image-container {
+      display: inline-block;
+      vertical-align: middle;
+      width: 66%;
+   }
+
+   .testimonial__info {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+   }
+   
 }
