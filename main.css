@@ -9,8 +9,7 @@
    /* background-image: radial-gradient(ellipse closest-corner at 20% 50%, red, blue 70%, green); */   
    width: 100vw; 
    height: 33vh; 
-   padding: 0.65rem; /* 10.4px computed value */
-   margin-top: 2.8rem; /* 44.8px computed value; pushes the slogan down so it isn't partially hidden under the nav bar. */  
+   padding: 0.65rem; /* 10.4px computed value */ 
    position: relative; 
 }   
 
@@ -24,7 +23,7 @@
    font-size: 1.6rem; /* 25.6px computed value */
 }
 
-@media (min-width: 40rem) and (min-height: 60rem) {
+@media (min-width: 40rem) and (min-height: 40rem) {
    #product-overview { 
       /* image */ 
       height: 40vh;
