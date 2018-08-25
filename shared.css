@@ -234,6 +234,16 @@ main {
    outline: none;
 }
 
+/* targets any element with the button class that also has the disabled attribute. 
+This overwrites the button:hover rules above. */
+.button[disabled]{
+   cursor: not-allowed;
+   border: #a1a1a1;
+   background: #ccc;
+   color: #a1a1a1;
+
+}
+
 /* this class is added dynamically using JS */
 .open {
    display: block !important;
