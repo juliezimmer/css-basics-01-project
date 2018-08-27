@@ -67,9 +67,6 @@ main {
    font-size: 1.25rem; /* 20px computed value */
    color: #0e4f1f;
    background: white;
-   font-family: "AnonymousPro", sans-serif;
-   font-weight: 700 ;
-   
 }
 
 .clearfix {
