@@ -31,7 +31,8 @@ main {
    background: rgba(0,0, 0, 0.5);
 }
 
-/* styling for header and navigation */
+/* styling for header and navigation
+   flex-container  */
 .main-header {
    width: 100%; /* so the nav bar occupies the entire space available to it */
    position: fixed;
@@ -40,12 +41,10 @@ main {
    background: #2ddf5c;
    padding: 0.75rem 2rem;  
    z-index: 1;
-}
-
-/* descendant combinator - targets any divs that directly follow  <header class="main-header"> element. */
-.main-header > div {
-   display: inline-block;
-   vertical-align: middle;
+   display: flex;
+   flex-direction: row;
+   align-items: center; 
+   justify-content: space-between;
 }
 
 .toggle-button {
@@ -70,42 +69,28 @@ main {
    margin: 0.6rem 0;
 }
 
-/* this affects the icon-logo, too */
 .main-header__brand {
    color: #0e4f1f;
    text-decoration: none;
    font-weight: bold;
-   height: 2.5rem;
-   display: inline-block; /* puts the icon on th nav bar at an apropriate size for the nav bar. */
-   vertical-align: middle;
-   /* removed or changed for  mobile-first view:
-         height: 1.375rem; // 22px computed value 
-   */
 }
 
 /* targets the icon directly */
 .main-header__brand img {
-   height: 100%;
-}
-
-.main-nav {
-   display: none;
-   /* removed or changed for mobile-first view:
-         display: inline-block;
-         text-align: right;
-         width: calc(100% - 44px);
-         vertical-align: middle;
-   */
+   height: 2.5rem;
+   vertical-align: middle;
 }
 
 .main-nav__items {
    margin: 0;
    padding: 0;
    list-style: none;
+   display: flex;
+   flex-direction: row;
 }
 
+/* making this a flex-container that holds the flex-items, which are the li elements/nav-links */
 .main-nav__item {
-   display: inline-block;
    margin: 0 1rem;
 }
 
@@ -132,19 +117,6 @@ main {
    border-radius: 8px;
 }
 
-@media (min-width: 40rem) {
-  .toggle-button {
-      display: none; /* hides menu icon when query is active */
-  } 
-
-  .main-nav {
-      display: inline-block;
-      text-align: right;
-      width: calc(100% - 44px);
-      vertical-align: middle;
-  }
-}
-/* hover and active effects on the CTA button */
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
@@ -154,6 +126,23 @@ main {
    border: none;
 }
 
+@media (min-width: 40rem) {
+   .toggle-button {
+       display: none; /* hides menu icon when query is active */
+   } 
+}
+
+@media (max-width: 40rem) {
+   .main-nav__item {
+      display: none;
+   }
+}
+
+.main-nav {
+   display: flex;
+   flex-direction: row;
+}
+
 /* ********** FOOTER ********** */
 .main-footer {
    background: black;
@@ -161,20 +150,19 @@ main {
    padding: 2rem;
 }
 
+/* becomes the flex-container for the footer */
 .main-footer__links {
    list-style: none;
    margin: 0;
    padding: 0;
    text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .main-footer__link {
-   display: block;
-   margin: 1rem; 
-   /* removed or changed for mobile-first view:
-         display: inline-block;
-         margin: 0 1rem; 
-   */
+   margin: 0.5rem 0; 
 }
 
 /* targets the <a> tag */
@@ -200,13 +188,17 @@ main {
    height: 100vh;
 }
 
+/* flex-container for mobile nav bar */
 .mobile-nav__items {
    width: 90%;
    height: 100%;
    list-style: none;
    margin: 10% auto;
    padding: 0;
-   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .mobile-nav__item {
@@ -245,7 +237,6 @@ This overwrites the button:hover rules above. */
    border: #a1a1a1;
    background: #ccc;
    color: #a1a1a1;
-
 }
 
 /* this class is added dynamically using JS */
@@ -255,7 +246,12 @@ This overwrites the button:hover rules above. */
 
 @media (min-width: 40rem) {
    .main-footer__link {
-      display: inline-block;
       margin: 0 1rem; 
+   }
+
+   /* becomes the flex-container for the footer */
+   .main-footer__links {
+      flex-direction: row;
+      justify-content: center;
    }
 }
