@@ -29,6 +29,7 @@ main {
    border-left: none; 
    position: relative;
    top: 35px;
+   overflow: hidden;
 }
 
 .package:hover,
@@ -49,11 +50,15 @@ main {
    position: absolute;
    top: 0;
    right: 0;
-   margin: 1.25rem; /* 20px computed value */
+   margin: 0;
    font-size: 0.75rem; /* 12px computed value */ 
    color: white;
    background: #FF5454;
-   padding: 0.5rem; /* 8px computer value */
+   padding: 0.5rem; /* 8px computed value */
+   transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);  
+   transform-origin: center;
+   width: 12rem;
+   text-align: center;
 }
 
 /* targets the <h2> element in each <section> */
