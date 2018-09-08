@@ -18,7 +18,7 @@
 
 /* targets the container around the image */
 .testimonial__image-container {
-   width: 100%;
+   width: 60%;
    max-width: 40rem;
    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
    /* removed or changed for mobile-first view 
@@ -27,11 +27,14 @@
       max-width: 580px;
       width: 65%;
    */
+   transform: skew(20deg);
+   overflow: hidden;
 }
 
 .testimonial__image {
    width: 100%;
    vertical-align: top; /* this gets rid of the white line on the bottom edge of the image when box-shadow is used. */ 
+   transform: skew(-20deg) scaleX(1.4);
 }
 
 /* targets the container around the customer testimonial and information */
