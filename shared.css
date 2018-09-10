@@ -35,6 +35,7 @@ main {
    width: 100vw;
    height: 100vh;
    background: rgba(0,0, 0, 0.5);
+   
 }
 
 /* styling for header and navigation
@@ -114,6 +115,10 @@ main {
    border-bottom: 5px solid #fff;
 }
 
+.main-nav__item--cta {
+   animation: wiggle 400ms 3s 8 ease-out none;
+}
+
 /* targets the Start Hosting navigation link only; the anchor tag  */ 
 .main-nav__item--cta a, 
 .mobile-nav__item--cta a {
@@ -187,7 +192,7 @@ main {
 
 /* ********** Side Nav Bar ********** */ 
 .mobile-nav {
-   display: none; 
+   transform: translateX(-100%); /* moves entire element width to the left */
    position: fixed;
    z-index: 101;
    top: 0;
@@ -195,6 +200,7 @@ main {
    background: white;
    width: 80%;
    height: 100vh;
+   transition: transform 300ms ease-out;
 }
 
 /* flex-container for mobile nav bar */
@@ -251,6 +257,8 @@ This overwrites the button:hover rules above. */
 /* this class is added dynamically using JS */
 .open {
    display: block !important;
+   opacity: 1 !important;
+   transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -262,5 +270,18 @@ This overwrites the button:hover rules above. */
    .main-footer__links {
       flex-direction: row;
       justify-content: center;
+   }
+}
+
+/* start hosting button animation */
+@keyframes wiggle {
+   0% {
+      transform: rotateZ(0);
+   }
+   50% {
+      transform: rotateZ(-10deg);
+   }
+   100% {
+      transform: rotateZ(10deg);
    }
 }
