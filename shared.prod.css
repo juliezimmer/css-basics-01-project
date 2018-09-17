@@ -10,7 +10,8 @@ THe :root pseudoselector selects the entire document  */
 }
 
 * {
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
 }
 
 html {
@@ -21,15 +22,19 @@ body{
    font-family: 'Montserrat', sans-serif;
    margin: 0; /* overrides browser default margins of 8px */
    height: 100%; 
+   display: -ms-grid; 
    display: grid;
-   grid-template-rows: 3.5rem auto fir-content(8rem); /* auto takes as much space as is needed for the content */ 
-   grid-template-areas: "header"
+       -ms-grid-rows: 3.5rem auto fir-content(8rem);
+       grid-template-rows: 3.5rem auto fir-content(8rem); /* auto takes as much space as is needed for the content */ 
+       grid-template-areas: "header"
                         "main"
                         "footer";
 }
 
 main {
    /* if grid-template-areas is used:  */
+   -ms-grid-row: 2;
+   -ms-grid-column: 1;
    grid-area: main; 
    /* grid-row: 2 / 3; */
 }
@@ -59,12 +64,21 @@ main {
    /* vendor prefixes for flexbox */
    display: -webkit-box;
    display: -ms-flexbox;
-   display: -webkit-flex;
    display: flex;
    
-   flex-direction: row;
-   align-items: center; 
-   justify-content: space-between;
+   -webkit-box-orient: horizontal;
+   
+   -webkit-box-direction: normal;
+   
+       -ms-flex-direction: row;
+   
+           flex-direction: row;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center; 
+   -webkit-box-pack: justify; 
+       -ms-flex-pack: justify; 
+           justify-content: space-between;
 }
 
 .toggle-button {
@@ -105,8 +119,13 @@ main {
    margin: 0;
    padding: 0;
    list-style: none;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: row;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
 }
 
 /* making this a flex-container that holds the flex-items, which are the li elements/nav-links */
@@ -129,7 +148,8 @@ main {
 }
 
 .main-nav__item--cta {
-   animation: wiggle 400ms 3s 8 ease-out none;
+   -webkit-animation: wiggle 400ms 3s 8 ease-out none;
+           animation: wiggle 400ms 3s 8 ease-out none;
 }
 
 /* targets the Start Hosting navigation link only; the anchor tag  */ 
@@ -163,8 +183,13 @@ main {
 }
 
 .main-nav {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: row;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
 }
 
 /* ********** FOOTER ********** */
@@ -173,6 +198,8 @@ main {
    margin-top: 3rem;
    padding: 2rem;
    /* if grid-template-areas is used : */
+   -ms-grid-row: 3;
+   -ms-grid-column: 1;
    grid-area: footer;
    /* grid-row: 3 / 4; */
 }
@@ -183,9 +210,16 @@ main {
    margin: 0;
    padding: 0;
    text-align: center;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
 }
 
 .main-footer__link {
@@ -205,7 +239,9 @@ main {
 
 /* ********** Side Nav Bar ********** */ 
 .mobile-nav {
-   transform: translateX(-100%); /* moves entire element width to the left */
+   -webkit-transform: translateX(-100%);
+       -ms-transform: translateX(-100%);
+           transform: translateX(-100%); /* moves entire element width to the left */
    position: fixed;
    z-index: 101;
    top: 0;
@@ -213,7 +249,11 @@ main {
    background: white;
    width: 80%;
    height: 100vh;
+   -webkit-transition: -webkit-transform 300ms ease-out;
+   transition: -webkit-transform 300ms ease-out;
+   -o-transition: transform 300ms ease-out;
    transition: transform 300ms ease-out;
+   transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
 }
 
 /* flex-container for mobile nav bar */
@@ -223,10 +263,19 @@ main {
    list-style: none;
    margin: 10% auto;
    padding: 0;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
 }
 
 .mobile-nav__item {
@@ -271,7 +320,9 @@ This overwrites the button:hover rules above. */
 .open {
    display: block !important;
    opacity: 1 !important;
-   transform: translateY(0) !important;
+   -webkit-transform: translateY(0) !important;
+       -ms-transform: translateY(0) !important;
+           transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -281,20 +332,42 @@ This overwrites the button:hover rules above. */
 
    /* becomes the flex-container for the footer */
    .main-footer__links {
-      flex-direction: row;
-      justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
    }
 }
 
 /* start hosting button animation */
-@keyframes wiggle {
+@-webkit-keyframes wiggle {
    0% {
-      transform: rotateZ(0);
+      -webkit-transform: rotateZ(0);
+              transform: rotateZ(0);
    }
    50% {
-      transform: rotateZ(-10deg);
+      -webkit-transform: rotateZ(-10deg);
+              transform: rotateZ(-10deg);
    }
    100% {
-      transform: rotateZ(10deg);
+      -webkit-transform: rotateZ(10deg);
+              transform: rotateZ(10deg);
+   }
+}
+@keyframes wiggle {
+   0% {
+      -webkit-transform: rotateZ(0);
+              transform: rotateZ(0);
+   }
+   50% {
+      -webkit-transform: rotateZ(-10deg);
+              transform: rotateZ(-10deg);
+   }
+   100% {
+      -webkit-transform: rotateZ(10deg);
+              transform: rotateZ(10deg);
    }
 }
